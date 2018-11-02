@@ -87,8 +87,14 @@ main {
     flex:0 0 50%;
     max-width:50%;
 }
+.school {
+    font-weight: bold;
+}
 .school span {
   color: #A7B8BF;
+    font-weight: normal;
+    text-decoration: underline;
+    padding-right: .5em;;
 }
 
 footer {
