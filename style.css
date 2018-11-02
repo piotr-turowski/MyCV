@@ -14,7 +14,12 @@ article {
 section{
   margin: 1em;
   padding: 1em;
+    border-bottom: 1px solid #ddd;
 }
+section:last-child{
+    border-bottom:0px ;
+}
+
 
 header, main, footer {
   margin: 0 auto;
@@ -49,18 +54,37 @@ main {
 }
 
 .course {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap:wrap;
 }
 
 .course .title {
+    font-weight: bold;
+    color:#509e98;
+    -ms-flex: 0 0 33.3%;
+    flex: 0 0 33.3%;
+    max-width: 33%;
 }
 
 .course .descrition {
+    -ms-flex: 0 0 66.6%;
+        flex: 0 0 66.6%;
+    max-width: 66.6%;
 }
-
+.course .descrition p {
+    padding-left: 1em;
+}
 .school span {
   color: #A7B8BF;
 }
 
 footer {
  padding: 1em;
+}
+h3 {
+    font-weight: bold;
+    text-transform: uppercase;
+    
 }
