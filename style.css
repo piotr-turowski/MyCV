@@ -7,6 +7,16 @@ body {
     font-family: Raleway,sans-serif;
 }
 
+
+a {
+  color: #1C9C94;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.5;
+}
+
 article {
   padding:0 1em;
 }
@@ -14,10 +24,7 @@ article {
 section{
   margin: 1em;
   padding: 1em;
-    border-bottom: 1px solid #ddd;
-}
-section:last-child{
-    border-bottom:0px ;
+  
 }
 
 
@@ -32,7 +39,7 @@ header {
     background-size: cover;
     background-position: fixed;
     color:white;
-    text-transform:uppercase;
+   
 }
 
 header section {
@@ -47,13 +54,40 @@ border-radius: 50%;
 
 h1 {
   margin: 1em 0;
+     text-transform:uppercase;
+}
+h3 {
+    font-weight: bold;
+    text-transform: uppercase;   
+}
+h4 {
+    font-weight:bold;
 }
 
 main {
   max-width: 1140px;
 }
+main section:not(:last-child) {
+      border-bottom: 1px solid #ddd;
+}
 
-.course {
+.fab {
+  border: 1px solid white;
+  border-radius: 50%;
+  font-size: 1.5em;
+  width: 1.5em;
+  height: 1.5em;
+  line-height: 1.5em;
+  margin: 5px;
+  text-align: center;
+}
+
+a .fab {
+  color: white;
+}
+
+
+.course, .skills {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
@@ -76,19 +110,25 @@ main {
 .course .descrition p {
     padding-left: 1em;
 }
-.skills {
-     display: -ms-flexbox;
-    display:flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap:wrap;
-}
+
 .skills .column {
     -ms-flex: 0 0 50%%;
     flex:0 0 50%;
     max-width:50%;
 }
+
+.skills .column ul {
+  list-style-type: none;
+}
+.skills .column ul > li:before {
+  content: "►";
+  padding-right: 0.5em;
+  color: #509e98;
+}
+
 .school {
     font-weight: bold;
+    text-transform: capitalize;
 }
 .school span {
   color: #A7B8BF;
@@ -98,11 +138,33 @@ main {
 }
 
 footer {
- padding: 1em;
-}
-h3 {
-    font-weight: bold;
-    text-transform: uppercase;   
+ padding: 1em 1.5em;
+    text-align: right;
+    color:white;
+    background-color: #A7B8BF;
 }
 
+@media only screen and (max-width: 768px) {
+  .course {
+    display: block;
+  }
+
+  .course .title, .course .descrition {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .skills {
+    display: block;
+  }
+
+  .skills .column {
+    max-width: 100%;
+  }
+
+  footer {
+    text-align: center;
+  }
+}
 
